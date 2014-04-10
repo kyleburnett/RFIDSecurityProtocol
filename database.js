@@ -96,7 +96,6 @@ app.get('/query', function (req, res, next) {
             // Update pseudonyms
             database[i].old_pseudo = pseudo;
             var shasum = crypto.createHash('sha256');
-            console.log(pseudo);
             shasum.update(pseudo);
             database[i].pseudo = shasum.digest('base64');
 

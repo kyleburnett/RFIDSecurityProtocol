@@ -79,6 +79,9 @@ app.get('/authenticate', function (req, res, next) {
         c_4 = hmac.digest('base64');
 
         if (c_4 == credentials.c_4 && (mac[0] == N_t_string || mac[0] == N_r_string) && (mac[1] == N_t_string || mac[1] == N_r_string)) {
+            var shasum = crypto.createHash('sha256');
+            shasum.update(pseudonym);
+            pseudonym = shasum.digest('base64');
             res.send(200);
         } else {
             console.log('incorrect nonces or MAC')
