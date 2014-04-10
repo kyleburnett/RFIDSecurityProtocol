@@ -10,4 +10,5 @@ This is a repository for an RFID security protocol for the healthcare environmen
 3. Navigate to the directory where this file resides in a command prompt.
 4. Type `npm install`. This will create a directory called node modules.
 5. Start the tag server with `node tag_server.js`.
-6. Start the reader with `node reader.js`.
+6. Start the database server with `node database.js`.
+7. Start the reader with `node reader.js`.
